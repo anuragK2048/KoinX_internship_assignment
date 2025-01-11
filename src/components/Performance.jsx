@@ -62,9 +62,9 @@ function Performance() {
             i
           </span>
         </div>
-        <div className="flex flex-col gap-6 md:flex-row">
+        <div className="mx-2 flex flex-col flex-wrap gap-24 md:flex-row">
           {/* Left Column */}
-          <div className="flex flex-grow flex-col whitespace-nowrap text-xs font-medium md:text-sm">
+          <div className="flex flex-grow flex-col whitespace-nowrap text-sm font-medium md:text-base">
             {[
               ["Bitcoin Price", "$16,815.46"],
               ["24h Low / 24h High", "$16,382.07 / $16,874.12"],
@@ -74,7 +74,7 @@ function Performance() {
             ].map(([label, value], index) => (
               <div
                 key={index}
-                className="text-slateGray flex h-10 items-center justify-between gap-5 border-b border-gray-300"
+                className="text-slateGray flex h-14 items-center justify-between gap-5 border-b border-gray-300"
               >
                 <span>{label}</span>
                 <span className="text-eerieBlack whitespace-nowrap">
@@ -85,7 +85,7 @@ function Performance() {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-grow flex-col whitespace-nowrap text-xs font-medium md:text-sm">
+          <div className="flex flex-grow flex-col whitespace-nowrap text-sm font-medium md:text-base">
             {[
               ["Market Cap", "$323,507,290,047"],
               ["Market Cap Dominance", "38.343%"],
@@ -115,7 +115,7 @@ function Performance() {
             ].map(([label, value], index) => (
               <div
                 key={index}
-                className="text-slateGray flex h-10 items-center justify-between gap-5 border-b border-gray-300"
+                className="text-slateGray flex h-14 items-center justify-between gap-5 border-b border-gray-300"
               >
                 <span>{label}</span>
                 <div className="text-eerieBlack flex flex-col items-end">
