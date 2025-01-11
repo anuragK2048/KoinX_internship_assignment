@@ -28,10 +28,10 @@ function CoinPrice({ coinId }) {
 
   return (
     <div className="mx-2 md:mx-4 lg:mx-9">
-      <div className="flex flex-row gap-2 pb-14 pt-5 text-sm md:py-3">
-        <span className="text-slate-400">Cryptopcurrencies</span>
-        <span className="text-slate-400"> {">>"}</span>
-        {coinData && <span className="font-semibold">{coinData.name}</span>}
+      <div className="mb-2 flex flex-row gap-2 pb-14 pt-5 text-base md:py-3">
+        <span className="font-light text-slate-800">Cryptopcurrencies</span>
+        <span className="scale-90 text-slate-800"> {">>"}</span>
+        {coinData && <span className="">{coinData.name}</span>}
       </div>
       <div className="relative rounded-md border border-gray-200 bg-white pt-6 shadow-md lg:px-5 lg:pb-7">
         {coinData && priceData && (
@@ -48,7 +48,7 @@ function CoinPrice({ coinId }) {
                     />
                   )}
                   <h1
-                    className="text-lg font-bold md:text-3xl"
+                    className="text-2xl font-semibold md:text-3xl"
                     style={{ color: "#0B1426" }}
                   >
                     {coinData.name}
@@ -63,7 +63,7 @@ function CoinPrice({ coinId }) {
 
                 <div>
                   <p
-                    className="text-md rounded-lg px-1 py-0.5 text-white sm:rounded-md sm:px-2 sm:py-1.5 sm:text-lg"
+                    className="text-md rounded-lg px-3 py-1 text-white sm:rounded-md sm:px-2 sm:py-1.5 sm:text-lg"
                     style={{ backgroundColor: "#808A9D" }}
                   >
                     Rank #{coinData.market_cap_rank}
