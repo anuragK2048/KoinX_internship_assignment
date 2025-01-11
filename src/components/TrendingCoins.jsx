@@ -22,12 +22,12 @@ export default function TrendingCoins() {
   }, []);
 
   return (
-    <div className="border border-gray-200 bg-white px-5 py-5 pb-7 shadow-md md:ml-6 md:mr-6 md:rounded-md md:py-7 lg:ml-5 lg:mr-9">
+    <div className="border border-gray-200 bg-white px-5 py-5 pb-7 md:rounded-md md:py-7">
       <h3
-        className="pb-2 text-xl font-bold lg:text-3xl"
+        className="pb-2 text-xl font-semibold lg:text-2xl"
         style={{ color: "#0F1629" }}
       >
-        Trending Coins (24H)
+        Trending Coins (24h)
       </h3>
       {trendingCoins.map((coin) => (
         <div

@@ -1,10 +1,11 @@
 import TrendingCoins from "./TrendingCoins";
+import getStartedImg from "../assets/images/frame.svg";
 
 function GetStartedSection() {
   return (
-    <div className="flex flex-col gap-6 md:gap-6 lg:gap-4">
+    <div className="mx-3 flex flex-col gap-6 md:mx-4 md:gap-6 lg:-ml-4 lg:mr-14 lg:gap-4">
       <div
-        className="ml-3 mr-3 rounded-xl px-3 py-1 pt-4 md:ml-6 md:mr-4 md:rounded-2xl md:px-12 md:py-8 md:pt-11 lg:ml-5 lg:mr-9"
+        className="rounded-xl px-3 py-1 pt-4 md:rounded-2xl md:px-12 md:py-8 md:pt-11"
         style={{ backgroundColor: "#0052FE" }}
       >
         <div className="flex flex-col items-center justify-center gap-10">
@@ -22,13 +23,7 @@ function GetStartedSection() {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 pb-6">
-            {/* <Image
-                src="/frame.svg"
-                alt="Frame Logo"
-                width={190}
-                height={24}
-                className="w-40 md:w-44"
-              /> */}
+            <img src={getStartedImg} alt="Frame Logo" className="w-[h-24px]" />
             <div>
               <button
                 className="rounded-lg bg-white px-6 py-3 text-sm font-bold md:text-lg"

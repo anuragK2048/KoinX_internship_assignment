@@ -27,7 +27,7 @@ function CoinPrice({ coinId }) {
   }, [coinId]);
 
   return (
-    <div className="ml-2 md:ml-4 lg:ml-9">
+    <div className="mx-2 md:mx-4 lg:mx-9">
       <div className="flex flex-row gap-2 pb-14 pt-5 text-sm md:py-3">
         <span className="text-slate-400">Cryptopcurrencies</span>
         <span className="text-slate-400"> {">>"}</span>

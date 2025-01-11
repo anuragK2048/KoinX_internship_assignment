@@ -2,7 +2,7 @@ import React from "react";
 
 function Performance() {
   return (
-    <div className="ml-3 mt-6 flex flex-col gap-6 rounded-md border border-gray-200 bg-white px-2 pb-8 pt-3 shadow-md md:ml-4 md:gap-7 md:px-6 md:pb-12 md:pt-6 lg:ml-9">
+    <div className="mx-3 mt-6 flex flex-col gap-6 rounded-md border border-gray-200 bg-white px-2 pb-8 pt-3 shadow-md md:mx-4 md:gap-7 md:px-6 md:pb-12 md:pt-6 lg:mx-9">
       <h2 className="text-customBlue text-xl font-bold md:text-2xl">
         Performance
       </h2>
@@ -62,9 +62,9 @@ function Performance() {
             i
           </span>
         </div>
-        <div className="mx-2 flex flex-col flex-wrap gap-24 md:flex-row">
+        <div className="mx-2 flex flex-col flex-wrap gap-4 max-[470px]:gap-0 md:flex-row min-[1025px]:gap-24">
           {/* Left Column */}
-          <div className="flex flex-grow flex-col whitespace-nowrap text-sm font-medium md:text-base">
+          <div className="flex flex-grow flex-col text-sm font-medium md:text-base min-[800px]:w-2/5">
             {[
               ["Bitcoin Price", "$16,815.46"],
               ["24h Low / 24h High", "$16,382.07 / $16,874.12"],
@@ -74,18 +74,16 @@ function Performance() {
             ].map(([label, value], index) => (
               <div
                 key={index}
-                className="text-slateGray flex h-14 items-center justify-between gap-5 border-b border-gray-300"
+                className="text-slateGray -gap-10 flex h-14 items-center justify-between border-b border-gray-300"
               >
                 <span>{label}</span>
-                <span className="text-eerieBlack whitespace-nowrap">
-                  {value}
-                </span>
+                <span className="text-eerieBlack text-right">{value}</span>
               </div>
             ))}
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-grow flex-col whitespace-nowrap text-sm font-medium md:text-base">
+          <div className="flex flex-grow flex-col whitespace-nowrap text-sm font-medium md:text-base min-[800px]:w-2/5">
             {[
               ["Market Cap", "$323,507,290,047"],
               ["Market Cap Dominance", "38.343%"],

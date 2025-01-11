@@ -3,7 +3,7 @@ import holdingBitcoin1 from "../assets/images/holdingBitcoin1.svg";
 import holdingBitcoin2 from "../assets/images/holdingBitcoin2.svg";
 function About() {
   return (
-    <div className="ml-3 mt-6 rounded-md border border-gray-200 bg-white px-2 pt-3 tracking-wide shadow-md sm:pb-8 md:ml-4 md:px-7 md:pt-7 lg:ml-9">
+    <div className="mx-3 mt-6 rounded-md border border-gray-200 bg-white px-2 pt-3 tracking-wide shadow-md sm:pb-8 md:mx-4 md:px-7 md:pt-7 lg:mx-9">
       <h2 className="text-customBlue pt-2 text-xl font-bold tracking-wide md:text-2xl">
         About Bitcoin
       </h2>

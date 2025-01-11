@@ -3,11 +3,11 @@ import PieChart from "./PieChart";
 const Tokenomics = () => {
   return (
     <div className="hidden md:block">
-      <div className="ml-3 mt-6 flex flex-col gap-3 rounded-md border border-gray-200 bg-white px-7 pb-11 pt-7 tracking-wide shadow-md md:ml-4 lg:ml-9">
+      <div className="mx-3 mt-6 flex flex-col gap-3 rounded-md border border-gray-200 bg-white px-7 pb-11 pt-7 tracking-wide shadow-md md:mx-4 lg:mx-9">
         <h2 className="text-customBlue text-xl font-bold md:text-2xl">
           Tokenomics
         </h2>
-        <h3 className="text-charcoalGray pt-4 text-xl font-semibold">
+        <h3 className="text-charcoalGray pt-2 text-xl font-semibold">
           Initial Distribution
         </h3>
         <div>

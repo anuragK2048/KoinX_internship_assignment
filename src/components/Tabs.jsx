@@ -24,7 +24,7 @@ function Tabs() {
   };
 
   return (
-    <div className="text-greenishGray ml-2 flex flex-row gap-12 overflow-x-auto border-b-2 border-gray-300 pt-10 text-sm font-semibold md:ml-4 md:pt-14 lg:ml-9 lg:text-lg">
+    <div className="text-greenishGray mx-2 flex flex-row gap-12 overflow-x-auto border-b-2 border-gray-300 pt-10 text-sm font-semibold md:mx-4 md:pt-14 lg:mx-9 lg:text-lg">
       {/* Custom styles to hide the scrollbar */}
       <style>
         {`

@@ -109,7 +109,7 @@ const SentimentCarousel = () => {
             className="w-11/12 flex-shrink-0 pr-4 md:w-5/6 lg:w-2/3"
           >
             <div
-              className={`rounded-xl bg-${card.bg_color}-50 p-2 pb-5 md:p-6 md:pb-10`}
+              className={`rounded-xl ${card.bg_color === "green" ? "bg-green-50" : "bg-blue-50"} p-2 pb-5 md:p-6 md:pb-10`}
             >
               <div className="flex flex-row gap-3">
                 <img
