@@ -1,6 +1,7 @@
 import React from "react";
 import holdingBitcoin1 from "../assets/images/holdingBitcoin1.svg";
 import holdingBitcoin2 from "../assets/images/holdingBitcoin2.svg";
+import arrowRight from "../assets/images/arrow_right.png";
 function About() {
   return (
     <div className="mx-3 mt-6 rounded-md border border-gray-200 bg-white px-2 pt-3 tracking-wide shadow-md sm:pb-8 md:mx-4 md:px-7 md:pt-7 lg:mx-9">
@@ -54,38 +55,40 @@ function About() {
         <h2 className="text-xl font-bold md:text-2xl">
           Already Holding Bitcoin?
         </h2>
-        <div className="flex flex-row flex-wrap gap-4 pt-5 md:flex-nowrap">
-          <div className="flex w-full flex-row gap-8 rounded-lg bg-blue-400 p-4 md:w-1/2">
+        <div className="flex flex-row flex-wrap gap-4 pt-5 md:flex-nowrap lg:mr-4 lg:gap-8">
+          <div className="flex h-[152px] w-full flex-row gap-2 rounded-lg bg-gradient-to-br from-[#94e9aa] via-[#5c9fa7] to-[#2d60a7] p-3 md:w-1/2">
             <img
               src={holdingBitcoin1}
               alt="AboutLogo"
-              style={{ width: "170px", height: "24px" }}
+              // style={{ width: "170px", height: "24px" }}
+              className="md:h-32"
             />
-            <div className="flex flex-col items-start justify-center gap-6 leading-7 md:leading-9">
-              <p className="w-44 text-lg font-bold text-white md:w-40 md:text-2xl">
+            <div className="ml-5 mt-[9px] flex max-w-40 flex-col flex-wrap gap-4 min-[1300px]:ml-6">
+              <div className="text-lg font-semibold text-white md:text-xl">
                 Calculate Your Profits
-              </p>
-              <button className="flex flex-row items-center rounded-md bg-white px-3 py-1 text-sm font-semibold md:px-6 md:py-2 md:text-lg md:tracking-wide">
-                Check Now &nbsp;{" "}
-                <span className="text-xl md:text-3xl">&#x1F852;</span>
+              </div>
+              <button className="flex w-36 flex-row items-center justify-evenly rounded-md bg-white px-1.5 py-1 text-sm font-[500] md:text-base">
+                Check Now{" "}
+                <img src={arrowRight} alt="arrow" className="h-6"></img>
               </button>
             </div>
           </div>
 
-          <div className="flex w-full flex-row gap-6 rounded-lg bg-orange-400 p-4 md:w-1/2 md:gap-8">
+          <div className="flex h-[152px] w-full flex-row gap-2 rounded-lg bg-gradient-to-br from-[#f19b6e] via-[#e66f55] to-[#de4d42] p-3 md:w-1/2">
             <img
               src={holdingBitcoin2}
               alt="AboutLogo"
-              style={{ width: "170px", height: "24px" }}
+              // style={{ width: "170px", height: "24px" }}
+              className="md:h-32"
             />
-            <div className="flex flex-col items-start justify-center gap-6">
-              <p className="w-30 text-lg font-bold leading-7 text-white md:w-56 md:text-2xl md:leading-9">
+            <div className="ml-5 mt-[9px] flex flex-col gap-4 lg:w-max min-[1300px]:ml-6">
+              <div className="w-44 text-lg font-semibold text-white md:w-60 md:text-xl">
                 Calculate your tax liability
-              </p>
-              <button className="flex flex-row items-center rounded-md bg-white px-3 py-1 text-sm font-semibold md:px-6 md:py-2 md:text-lg md:tracking-wide">
-                Check Now &nbsp;{" "}
-                <span className="text-xl md:text-3xl">&#x1F852;</span>
-              </button>
+              </div>
+              <div className="flex w-36 flex-row items-center justify-evenly rounded-md bg-white px-1.5 py-1 text-sm font-[500] md:text-base">
+                Check Now{" "}
+                <img src={arrowRight} alt="arrow" className="h-6"></img>
+              </div>
             </div>
           </div>
         </div>

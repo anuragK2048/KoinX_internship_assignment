@@ -84,7 +84,7 @@ function TrendingCoinsSlider({ title }) {
           {trendingCoins.map((coin, index) => (
             <div
               key={coin.item.id}
-              className="coin-card flex h-32 w-44 min-w-72 flex-col gap-1 rounded-lg border border-gray-200 bg-white py-2 pl-2 pr-10 md:h-44 md:w-96 md:gap-2 md:py-4 md:pl-4"
+              className="coin-card flex h-32 w-44 min-w-44 flex-col gap-1 rounded-lg border border-gray-200 bg-white py-2 pl-2 md:h-44 md:w-96 md:min-w-72 md:gap-2 md:py-4 md:pl-4 md:pr-10"
             >
               <div className="felx-row flex items-center gap-2">
                 <img
