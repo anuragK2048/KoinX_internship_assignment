@@ -3,7 +3,7 @@ import holdingBitcoin1 from "../assets/images/holdingBitcoin1.svg";
 import holdingBitcoin2 from "../assets/images/holdingBitcoin2.svg";
 function About() {
   return (
-    <div className="ml-3 mt-6 rounded-md border border-gray-200 bg-white px-2 pb-8 pt-3 tracking-wide shadow-md md:ml-4 md:px-7 md:pt-7 lg:ml-9">
+    <div className="ml-3 mt-6 rounded-md border border-gray-200 bg-white px-2 pt-3 tracking-wide shadow-md sm:pb-8 md:ml-4 md:px-7 md:pt-7 lg:ml-9">
       <h2 className="text-customBlue pt-2 text-xl font-bold tracking-wide md:text-2xl">
         About Bitcoin
       </h2>
@@ -19,7 +19,7 @@ function About() {
           19.24 M BTC and a max supply of 21 M BTC.
         </p>
       </div>
-      <div className="border-gray-200 pb-4 md:border-b-2">
+      <div className="border-gray-200 md:border-b-2 md:pb-4">
         <p className="pt-2 text-lg font-bold md:text-xl">
           Lorem ipsum dolor sit amet
         </p>
@@ -54,7 +54,7 @@ function About() {
         <h2 className="text-xl font-bold md:text-2xl">
           Already Holding Bitcoin?
         </h2>
-        <div className="flex flex-row flex-wrap gap-10 pt-5 md:flex-nowrap">
+        <div className="flex flex-row flex-wrap gap-4 pt-5 md:flex-nowrap">
           <div className="flex w-full flex-row gap-8 rounded-lg bg-blue-400 p-4 md:w-1/2">
             <img
               src={holdingBitcoin1}
@@ -90,8 +90,7 @@ function About() {
           </div>
         </div>
       </div>
-
-      <p className="text-greenishGray pt-4 text-sm leading-8 md:text-lg">
+      <p className="text-greenishGray hidden pt-4 text-sm leading-8 sm:block md:text-lg">
         Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa
         vel convallis duis ac. Mi adipiscing semper scelerisque porttitor
         pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum
