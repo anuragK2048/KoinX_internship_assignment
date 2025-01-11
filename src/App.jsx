@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import "./App.css";
-import PriceChart from "./components/priceChart/PriceChart";
-import Navbar from "./components/navbar/Navbar";
+import PriceChart from "./components/PriceChart";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [count, setCount] = useState(0);
