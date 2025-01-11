@@ -7,6 +7,7 @@ import GetStartedSection from "./components/GetStartedSection";
 import CoinPrice from "./components/CoinPrice";
 import Tabs from "./components/Tabs";
 import Performance from "./components/Performance";
+import Sentiment from "./components/Sentiment";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,9 @@ function App() {
       </div>
       <div className="w-full lg:w-4/6" id="overview">
         <Performance />
+      </div>
+      <div className="w-full lg:w-4/6" id="sentiments">
+        <Sentiment />
       </div>
       <div className="absolute w-full lg:right-0 lg:top-36 lg:w-2/6">
         <GetStartedSection />

@@ -16,7 +16,7 @@ function Performance() {
               46,930.22
             </span>
           </div>
-          <div className="relative h-1 flex-grow rounded-md bg-gradient-to-r from-red-500 via-yellow-500 to-green-500">
+          <div className="relative mx-4 h-1 flex-grow rounded-md bg-gradient-to-r from-red-500 via-yellow-500 to-green-500">
             <div className="absolute -bottom-8 left-2/3 -translate-x-1/4 transform">
               <span className="absolute -top-7 text-xs md:text-sm">
                 &#9650;
@@ -42,7 +42,7 @@ function Performance() {
               16,930.22
             </span>
           </div>
-          <div className="h-1 flex-grow rounded-md bg-gradient-to-r from-red-500 via-yellow-500 to-green-500"></div>
+          <div className="mx-4 h-1 flex-grow rounded-md bg-gradient-to-r from-red-500 via-yellow-500 to-green-500"></div>
           <div className="text-customDarkBlue flex flex-col gap-1 md:gap-2">
             <span className="text-xs">52W High</span>
             <span className="text-base font-semibold md:text-lg">
@@ -58,8 +58,8 @@ function Performance() {
           <h3 className="text-customDarkBlue text-lg font-bold md:text-xl">
             Fundamentals
           </h3>
-          <span className="h-3 w-3 rounded-full bg-gray-400 text-center text-xs text-white md:h-4 md:w-4 md:text-sm">
-            <span className="">i</span>
+          <span className="rounded-full bg-gray-500 px-1.5 text-xs text-white md:px-2 md:text-sm">
+            i
           </span>
         </div>
         <div className="flex flex-col gap-6 md:flex-row">

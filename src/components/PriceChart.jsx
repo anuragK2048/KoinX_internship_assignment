@@ -55,7 +55,10 @@ function TradingViewWidget() {
             "12m|1W",
             "60m|1W",
             "all|1M"
-          ]
+          ],
+          "lineColor": "rgba(41, 98, 255, 0.92)",
+          "topColor": "rgba(41, 98, 255, 0.24)",
+          "bottomColor": "rgba(41, 98, 255, 0)"
         }`;
     container.current.appendChild(script);
 
