@@ -12,8 +12,6 @@ import Team from "./components/Team";
 import TrendingCoinsSlider from "./components/TrendingCoinSlider";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="relative" style={{ width: "100%" }}>
       <Navbar />

@@ -41,38 +41,38 @@ export default function TrendingCoins() {
             <img
               src={coin.item.thumb}
               alt={coin.item.name}
-              className="mr-2 h-6 w-6 md:h-8 md:w-8"
+              className="mr-2 h-6 w-6 rounded-full md:h-8 md:w-8"
             />
-            <span className="text-sm lg:text-lg">{coin.item.name}</span>
-            <span className="text-sm lg:text-lg">
-              ({coin.item.symbol.toUpperCase()})
+            <span className="flex items-center text-sm font-normal lg:text-[1.075rem]">
+              {coin.item.name} ({coin.item.symbol.toUpperCase()})
             </span>
+            {/* <span className="text-sm lg:text-base"></span> */}
           </div>
 
           <div
-            className={`font-medium ${
+            className={`font-normal ${
               coin.item.data.price_change_percentage_24h.usd > 0
                 ? "text-green-500"
                 : "text-red-500"
             }`}
           >
-            <span
-              className={`rounded-sm px-2 py-1 text-xs lg:text-lg ${
+            <div
+              className={`flex w-20 items-center justify-between rounded-lg px-2 py-1 text-xs lg:w-[90px] lg:text-base ${
                 coin.item.data.price_change_percentage_24h.usd > 0
-                  ? "bg-green-100 text-green-700"
+                  ? "bg-green-100 text-green-600"
                   : "bg-red-100 text-red-600"
               }`}
             >
               {coin.item.data.price_change_percentage_24h.usd > 0 ? (
-                <span className="text-xs">&#9650; </span>
+                <div className="ml-0.5 text-xs">&#9650; </div>
               ) : (
-                <span className="text-xs">&#9660; </span>
+                <div className="ml-0.5 text-xs">&#9660; </div>
               )}
               {Math.round(
                 coin.item.data.price_change_percentage_24h.usd * 100,
               ) / 100}
               %
-            </span>
+            </div>
           </div>
         </div>
       ))}
