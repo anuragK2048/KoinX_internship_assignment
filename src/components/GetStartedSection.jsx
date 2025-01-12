@@ -3,7 +3,7 @@ import getStartedImg from "../assets/images/frame.svg";
 
 function GetStartedSection() {
   return (
-    <div className="mx-3 flex flex-col gap-6 max-[450px]:-mt-8 md:mx-4 md:gap-6 lg:-ml-4 lg:mr-14 lg:gap-4">
+    <div className="mx-3 mt-[58px] flex flex-col gap-6 max-[450px]:-mt-8 md:mx-4 md:gap-6 lg:-ml-4 lg:mr-14 lg:gap-4">
       <div
         className="rounded-xl px-3 py-1 pt-4 md:rounded-2xl md:px-12 md:py-8 md:pt-11"
         style={{ backgroundColor: "#0052FE" }}

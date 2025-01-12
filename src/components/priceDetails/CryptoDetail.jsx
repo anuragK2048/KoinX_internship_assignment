@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CoinPrice from "./CoinPrice";
-import { Navigate, redirect, useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 function CryptoDetail() {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ function CryptoDetail() {
   const [dropDownData, setDropDownData] = useState([]);
 
   useEffect(() => {
-    setSearchValue(coinID);
+    // setSearchValue(coinID);
     setDisplayList(false);
   }, [coinID]);
   useEffect(() => {
@@ -77,7 +77,10 @@ function CryptoDetail() {
                   <div
                     key={i}
                     className="cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-700"
-                    onClick={() => navigate(`/${ticker.coin_id}`)}
+                    onClick={() => {
+                      setSearchValue(ticker.coin_id);
+                      navigate(`/${ticker.coin_id}`);
+                    }}
                   >
                     {ticker.coin_id}
                   </div>

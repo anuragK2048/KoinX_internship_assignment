@@ -21,7 +21,7 @@ function TradingViewWidget({ symbol }) {
               "BINANCE:${symbol}USD|7D"
             ]
           ],
-          "chartOnly": false,
+          "chartOnly": true,
           "autosize": true,
           "width": "100%",
           "height": "560",
