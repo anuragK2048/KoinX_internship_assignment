@@ -59,7 +59,7 @@ function CryptoDetail() {
               value={searchValue}
               onChange={handleSearchQuery}
               placeholder="Search other cryptocurrencies..."
-              className="w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300"
+              className="w-full rounded-md border border-gray-300 px-4 py-2 text-lg text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300"
             />
             <span
               className="absolute right-3 p-2 text-gray-400 hover:cursor-pointer"
