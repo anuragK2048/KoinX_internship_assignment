@@ -47,7 +47,7 @@ function TradingViewWidget({ symbol }) {
           "lineWidth": 2,
           "lineType": 0,
           "dateRanges": [
-            "1d|15",
+            "1d|1",
             "1w|60",
             "1m|240",
             "3m|1D",
