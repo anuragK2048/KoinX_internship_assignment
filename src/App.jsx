@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
-import AppLayout from "./components/AppLayout";
-import Error from "./components/Error";
+import AppLayout from "./ui/AppLayout";
+import Error from "./ui/Error";
 import Home from "./ui/Home";
 
 function App() {

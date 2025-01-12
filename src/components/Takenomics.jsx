@@ -1,4 +1,4 @@
-import PieChart from "./PieChart";
+import PieChart from "./chart/PieChart";
 
 const Tokenomics = () => {
   return (

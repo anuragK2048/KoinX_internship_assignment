@@ -1,13 +1,13 @@
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 import GetStartedSection from "../components/GetStartedSection";
 import Tabs from "../components/Tabs";
 import Performance from "../components/Performance";
-import Sentiment from "../components/Sentiment";
+import Sentiment from "../components/sentiment/Sentiment";
 import About from "../components/About";
 import Tokenomics from "../components/Takenomics";
 import Team from "../components/Team";
 import TrendingCoinsSlider from "../components/TrendingCoinSlider";
-import CryptoDetail from "../components/CryptoDetail";
+import CryptoDetail from "../components/priceDetails/CryptoDetail";
 
 function Home() {
   return (

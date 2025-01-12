@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SentimentLogo1 from "../assets/images/SentimentLogo1.svg";
-import SentimentLogo2 from "../assets/images/SentimentLogo2.svg";
+import SentimentLogo1 from "../../assets/images/SentimentLogo1.svg";
+import SentimentLogo2 from "../../assets/images/SentimentLogo2.svg";
 
 const SentimentCarousel = () => {
   const [currentCard, setCurrentCard] = useState(0);

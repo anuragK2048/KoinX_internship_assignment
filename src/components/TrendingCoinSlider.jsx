@@ -49,7 +49,7 @@ function TrendingCoinsSlider({ title }) {
   };
 
   return (
-    <div className="pb-3 md:px-5 md:pb-9">
+    <div className="px-3 pb-3 md:px-5 md:pb-9">
       <div className="relative overflow-hidden md:ml-8 md:mr-8">
         {showLeftButton && (
           <div className="absolute left-0 top-1/2 z-50">

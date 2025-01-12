@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PriceChart from "./PriceChart";
+import PriceChart from "../chart/PriceChart";
 import axios from "axios";
 
 function CoinPrice({ coinId }) {
