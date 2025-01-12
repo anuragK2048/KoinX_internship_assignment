@@ -112,7 +112,7 @@ function CoinPrice({ coinId }) {
               Price Chart (USD)
             </div>
 
-            <PriceChart />
+            <PriceChart symbol={coinData.symbol.toUpperCase()} />
           </div>
         )}
       </div>

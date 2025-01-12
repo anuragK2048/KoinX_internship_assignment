@@ -10,13 +10,14 @@ import About from "./components/About";
 import Tokenomics from "./components/Takenomics";
 import Team from "./components/Team";
 import TrendingCoinsSlider from "./components/TrendingCoinSlider";
+import CryptoDetail from "./components/CryptoDetail";
 
 function App() {
   return (
     <div className="relative" style={{ width: "100%" }}>
       <Navbar />
       <div className="lg:w-[70%]">
-        <CoinPrice coinId={"bitcoin"} />
+        <CryptoDetail />
       </div>
       <div className="w-full lg:w-[70%]">
         <Tabs />
@@ -36,7 +37,7 @@ function App() {
       <div className="w-full lg:w-[70%]" id="team">
         <Team />
       </div>
-      <div className="hidden bg-white pt-14 sm:block">
+      <div className="hidden bg-white pt-14 sm:block" id="technicals">
         <TrendingCoinsSlider title={"You May Also Like"} />
       </div>
       <div className="hidden bg-white pb-14 sm:block">

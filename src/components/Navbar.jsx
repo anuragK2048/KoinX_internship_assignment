@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/images/koinX_logo.png";
-import menuIcon from "../assets/images/hamburger.png";
+import { HiOutlineMenu } from "react-icons/hi";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,15 +15,11 @@ function Navbar() {
         </div>
         <div className="flex gap-4 text-base font-semibold text-stone-700 md:gap-9">
           <button
-            className="rounded-lg px-3 py-2 text-xl text-black sm:hidden"
-            style={{ scale: "1.7" }}
+            className="mr-7 sm:hidden"
+            style={{ scale: "1.9" }}
             onClick={toggleMenu}
           >
-            {showMenu ? (
-              ""
-            ) : (
-              <img src={menuIcon} alt="=" style={{ scale: "0.4" }}></img>
-            )}
+            {showMenu ? "" : <HiOutlineMenu style={{}} />}
           </button>
           <div className="hidden content-center sm:block">Crypto Taxes</div>
           <div className="hidden content-center sm:block">Free Tools</div>
@@ -39,7 +35,7 @@ function Navbar() {
           style={{ width: "50%" }}
         >
           <button
-            className="absolute right-10 mt-1 scale-150 text-xl text-white"
+            className="absolute right-9 mt-0 scale-150 text-xl text-white"
             onClick={toggleMenu}
           >
             X

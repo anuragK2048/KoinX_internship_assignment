@@ -1,7 +1,7 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from "react";
 
-function TradingViewWidget() {
+function TradingViewWidget({ symbol }) {
   const container = useRef();
 
   useEffect(() => {
@@ -19,10 +19,10 @@ function TradingViewWidget() {
         {
           "symbols": [
             [
-              "COINBASE:BTCUSD|7D"
+              "BINANCE:${symbol}USD|7D"
             ]
           ],
-          "chartOnly": true,
+          "chartOnly": false,
           "autosize": true,
           "width": "100%",
           "height": "560",

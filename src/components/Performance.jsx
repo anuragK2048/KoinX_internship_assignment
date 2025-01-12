@@ -53,7 +53,7 @@ function Performance() {
       </div>
 
       {/* Fundamentals Section */}
-      <div className="flex flex-col gap-4 pt-4">
+      <div className="flex flex-col gap-4 pt-4" id="fundamentals">
         <div className="flex flex-row items-center gap-2">
           <h3 className="text-customDarkBlue text-lg font-bold md:text-xl">
             Fundamentals

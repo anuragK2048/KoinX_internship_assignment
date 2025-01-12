@@ -43,7 +43,7 @@ function Tabs() {
               activeTab === tab.id
                 ? "border-b-4 border-blue-500 pb-2 text-blue-600"
                 : ""
-            }`}
+            } ${tab.id === "technicals" || tab.id === "tokenomics" ? "hide" : ""}`}
             onClick={() => handleSetActive(tab.id)}
           >
             {tab.label}
