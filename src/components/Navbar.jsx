@@ -31,7 +31,7 @@ function Navbar() {
       </div>
       {showMenu && (
         <div
-          className="absolute right-0 top-0 z-50 min-h-screen bg-slate-900 bg-opacity-50 px-4 py-6 font-semibold sm:hidden"
+          className="min-h-88 fixed right-0 top-0 z-50 bg-neutral-800 bg-opacity-50 px-4 py-6 font-semibold backdrop-blur-md sm:hidden"
           style={{ width: "50%" }}
         >
           <button
@@ -40,7 +40,7 @@ function Navbar() {
           >
             X
           </button>
-          <div className="flex flex-col items-center gap-11 pt-24 text-lg">
+          <div className="flex flex-col items-center gap-11 pt-14 text-lg">
             <a href="#" className="text-white hover:text-gray-200">
               Crypto Taxes
             </a>

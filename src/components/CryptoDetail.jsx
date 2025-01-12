@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react";
 import CoinPrice from "./CoinPrice";
-import { redirect, useNavigate } from "react-router";
+import { Navigate, redirect, useNavigate, useParams } from "react-router";
 
 function CryptoDetail() {
+  const navigate = useNavigate();
+  const { coinID } = useParams();
+
   const [cryptoData, setCryptoData] = useState({});
   const [searchValue, setSearchValue] = useState("");
   const [displayList, setDisplayList] = useState(false);
   const [dropDownData, setDropDownData] = useState([]);
-  console.log(cryptoData);
+
+  useEffect(() => {
+    setSearchValue(coinID);
+    setDisplayList(false);
+  }, [coinID]);
   useEffect(() => {
     const options = {
       method: "GET",
@@ -28,7 +35,7 @@ function CryptoDetail() {
         setDropDownData(uniqueTickers);
       })
       .catch((err) => console.error(err));
-  }, []);
+  }, [coinID]);
   function handleSearchQuery(e) {
     const curQuery = e.target.value;
     setSearchValue(curQuery);
@@ -37,11 +44,6 @@ function CryptoDetail() {
     );
     setDropDownData(filteredData);
     setDisplayList(true);
-  }
-  function handleSelect(coinId) {
-    console.log(`Selected: ${coinId}`);
-    setSearchValue(coinId);
-    setDisplayList(false);
   }
   function handleDropClick() {
     setDisplayList((cur) => !cur);
@@ -56,7 +58,7 @@ function CryptoDetail() {
               type="text"
               value={searchValue}
               onChange={handleSearchQuery}
-              placeholder="Search cryptocurrencies..."
+              placeholder="Search other cryptocurrencies..."
               className="w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring focus:ring-indigo-300"
             />
             <span
@@ -75,7 +77,7 @@ function CryptoDetail() {
                   <div
                     key={i}
                     className="cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100 hover:text-indigo-700"
-                    onClick={() => handleSelect(ticker.coin_id)}
+                    onClick={() => navigate(`/${ticker.coin_id}`)}
                   >
                     {ticker.coin_id}
                   </div>
@@ -89,7 +91,7 @@ function CryptoDetail() {
           )}
         </div>
       )}
-      <CoinPrice coinId={"dogecoin"} />
+      <CoinPrice coinId={coinID} />
     </div>
   );
 }

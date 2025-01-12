@@ -3,7 +3,7 @@ import React, { useEffect, useRef, memo } from "react";
 
 function TradingViewWidget({ symbol }) {
   const container = useRef();
-
+  console.log("----------9999999");
   useEffect(() => {
     // Clear the container to prevent duplicates
     if (container.current) {
@@ -66,7 +66,7 @@ function TradingViewWidget({ symbol }) {
     return () => {
       if (container.current) container.current.innerHTML = "";
     };
-  }, []);
+  }, [symbol]);
 
   return (
     <div className="tradingview-widget-container" ref={container}>
