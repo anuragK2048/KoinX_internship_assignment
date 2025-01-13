@@ -1,10 +1,8 @@
-// TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from "react";
 
 function TradingViewWidget({ symbol }) {
   const container = useRef();
   useEffect(() => {
-    // Clear the container to prevent duplicates
     if (container.current) {
       container.current.innerHTML = ""; // Removes any existing widget
     }

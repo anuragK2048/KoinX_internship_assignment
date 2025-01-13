@@ -34,9 +34,11 @@ function Home() {
       <div className="w-full lg:w-[70%]" id="team">
         <Team />
       </div>
+      {/* Only for desktop view */}
       <div className="hidden bg-white pt-14 sm:block" id="technicals">
         <TrendingCoinsSlider title={"You May Also Like"} />
       </div>
+      {/* Only for desktop view */}
       <div className="hidden bg-white pb-14 sm:block">
         <TrendingCoinsSlider title={"Trending Coins"} />
       </div>

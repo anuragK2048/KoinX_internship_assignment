@@ -26,8 +26,9 @@ function TrendingCoinsSlider({ title }) {
     };
 
     fetchTrendingCoins();
-  }, []);
+  }, []); //runs only when component is mounted
 
+  // logic to implement sliding with buttons
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
       const newIndex =
@@ -51,6 +52,7 @@ function TrendingCoinsSlider({ title }) {
   return (
     <div className="px-3 pb-3 md:px-5 md:pb-9">
       <div className="relative overflow-hidden md:ml-8 md:mr-8">
+        {/* buttons for sliding */}
         {showLeftButton && (
           <div className="absolute left-0 top-1/2 z-50">
             <button
@@ -71,7 +73,8 @@ function TrendingCoinsSlider({ title }) {
             </button>
           </div>
         )}
-        <h2 className="text-darkGraphite text-xl font-semibold md:mb-5 md:text-2xl">
+
+        <h2 className="text-xl font-semibold text-darkGraphite md:mb-5 md:text-2xl">
           {title}
         </h2>
         <div
@@ -81,7 +84,8 @@ function TrendingCoinsSlider({ title }) {
             transition: "transform 0.5s ease",
           }}
         >
-          {trendingCoins.map((coin, index) => (
+          {/* displaying all trending coins */}
+          {trendingCoins.map((coin) => (
             <div
               key={coin.item.id}
               className="coin-card flex h-32 w-44 min-w-44 flex-col gap-1 rounded-lg border border-gray-200 bg-white py-2 pl-2 md:h-44 md:w-96 md:min-w-72 md:gap-2 md:py-4 md:pl-4 md:pr-10"
@@ -94,7 +98,7 @@ function TrendingCoinsSlider({ title }) {
                 />
 
                 <div className="flex flex-row items-center">
-                  <p className="text-darkGraphite text-xs font-normal md:text-base">
+                  <p className="text-xs font-normal text-darkGraphite md:text-base">
                     {coin.item.symbol}
                   </p>
 
@@ -116,9 +120,9 @@ function TrendingCoinsSlider({ title }) {
                   </p>
                 </div>
               </div>
-
+              {/* displaying price */}
               <div className="text-center">
-                <p className="text-darkCharcoal pb-2 text-sm md:text-[1.3rem]">
+                <p className="pb-2 text-sm text-darkCharcoal md:text-[1.3rem]">
                   {/[a-zA-Z]/.test(coin.item.data.price) ? (
                     <span className="text-sm font-extralight">
                       price unavailable
@@ -129,7 +133,7 @@ function TrendingCoinsSlider({ title }) {
                     </span>
                   )}
                 </p>
-
+                {/* image of current coin graph */}
                 <img
                   src={coin.item.data.sparkline}
                   alt={coin.item.name}

@@ -10,6 +10,7 @@ function GetStartedSection() {
       >
         <div className="flex flex-col items-center justify-center gap-4 md:gap-10">
           <div className="flex flex-col gap-4 text-center">
+            {/* Image for desktop view */}
             <img
               src={getStartedImg}
               alt="Frame Logo"
@@ -28,6 +29,7 @@ function GetStartedSection() {
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 pb-6">
+            {/* Image for mobile view */}
             <img
               src={getStartedImg}
               alt="Frame Logo"

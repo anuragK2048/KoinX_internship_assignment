@@ -9,6 +9,7 @@ function Navbar() {
   };
   return (
     <>
+      {/* Navbar for large view */}
       <div className="h-18 flex justify-between bg-white pl-7 pr-2 md:px-7">
         <div className="content-center">
           <img src={`${logo}`} className="h-[5rem]"></img>
@@ -19,7 +20,8 @@ function Navbar() {
             style={{ scale: "1.9" }}
             onClick={toggleMenu}
           >
-            {showMenu ? "" : <HiOutlineMenu style={{}} />}
+            {showMenu ? "" : <HiOutlineMenu style={{}} />}{" "}
+            {/*react hamburger icon*/}
           </button>
           <div className="hidden content-center sm:block">Crypto Taxes</div>
           <div className="hidden content-center sm:block">Free Tools</div>
@@ -29,6 +31,8 @@ function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Navbar for mobile view */}
       {showMenu && (
         <div
           className="min-h-88 fixed right-0 top-0 z-50 bg-neutral-800 bg-opacity-50 px-4 py-6 font-semibold backdrop-blur-md sm:hidden"

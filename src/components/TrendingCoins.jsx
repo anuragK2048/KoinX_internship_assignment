@@ -4,6 +4,7 @@ import axios from "axios";
 export default function TrendingCoins() {
   const [trendingCoins, setTrendingCoins] = useState([]);
 
+  //Fetch trending coins from coinGeko api
   useEffect(() => {
     const fetchTrendingCoins = async () => {
       try {
@@ -19,7 +20,7 @@ export default function TrendingCoins() {
     };
 
     fetchTrendingCoins();
-  }, []);
+  }, []); //runs only when component is mounted
 
   return (
     <div className="border border-gray-200 bg-white px-5 py-5 pb-7 md:rounded-md md:py-7">
@@ -46,7 +47,6 @@ export default function TrendingCoins() {
             <span className="flex items-center text-sm font-normal lg:text-[1.075rem]">
               {coin.item.name} ({coin.item.symbol.toUpperCase()})
             </span>
-            {/* <span className="text-sm lg:text-base"></span> */}
           </div>
 
           <div

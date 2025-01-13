@@ -4,7 +4,7 @@ import SentimentLogo2 from "../../assets/images/SentimentLogo2.svg";
 
 const SentimentCarousel = () => {
   const [currentCard, setCurrentCard] = useState(0);
-
+  // data for cards to display
   const cards = [
     {
       image: SentimentLogo1,
@@ -80,6 +80,7 @@ const SentimentCarousel = () => {
     },
   ];
 
+  //logic for moving cards
   const moveLeft = () => {
     setCurrentCard((prev) => (prev === 0 ? cards.length - 1 : prev - 1));
   };
@@ -90,6 +91,7 @@ const SentimentCarousel = () => {
 
   return (
     <div className="relative overflow-x-auto md:overflow-hidden">
+      {/* hiding scrollbar */}
       <style>{`
         ::-webkit-scrollbar {
           display: none;
@@ -103,6 +105,7 @@ const SentimentCarousel = () => {
           transform: `translateX(-${currentCard * (window.innerWidth / 22)}%)`,
         }}
       >
+        {/* displaying all cards */}
         {cards.map((card, index) => (
           <div
             key={index}
@@ -117,7 +120,7 @@ const SentimentCarousel = () => {
                   alt="Sentiment Logo"
                   className="w-8 md:w-12"
                 />
-                <p className="text-shadowyNavy text-xs font-semibold md:text-lg">
+                <p className="text-xs font-semibold text-shadowyNavy md:text-lg">
                   {card.content1}
                 </p>
               </div>
@@ -128,14 +131,15 @@ const SentimentCarousel = () => {
           </div>
         ))}
       </div>
+      {/* move left and right buttons */}
       <button
-        className="text-slateBlueGray absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 transform rounded-full bg-white px-4 py-2 text-2xl font-semibold shadow-md md:block lg:block"
+        className="absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 transform rounded-full bg-white px-4 py-2 text-2xl font-semibold text-slateBlueGray shadow-md md:block lg:block"
         onClick={moveLeft}
       >
         {"<"}
       </button>
       <button
-        className="text-slateBlueGray absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 transform rounded-full bg-white px-4 py-2 text-2xl font-semibold shadow-md md:block lg:block"
+        className="absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 transform rounded-full bg-white px-4 py-2 text-2xl font-semibold text-slateBlueGray shadow-md md:block lg:block"
         onClick={moveRight}
       >
         {">"}

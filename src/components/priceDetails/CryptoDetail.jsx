@@ -11,10 +11,12 @@ function CryptoDetail() {
   const [displayList, setDisplayList] = useState(false);
   const [dropDownData, setDropDownData] = useState([]);
 
+  // toggling list display
   useEffect(() => {
-    // setSearchValue(coinID);
     setDisplayList(false);
   }, [coinID]);
+
+  //fetching symbols of all coins
   useEffect(() => {
     const options = {
       method: "GET",
@@ -36,6 +38,7 @@ function CryptoDetail() {
       })
       .catch((err) => console.error(err));
   }, [coinID]);
+
   function handleSearchQuery(e) {
     const curQuery = e.target.value;
     setSearchValue(curQuery);
@@ -45,9 +48,11 @@ function CryptoDetail() {
     setDropDownData(filteredData);
     setDisplayList(true);
   }
+
   function handleDropClick() {
     setDisplayList((cur) => !cur);
   }
+
   return (
     <div>
       {cryptoData?.name && (
